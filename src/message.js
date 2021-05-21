@@ -141,7 +141,7 @@ export default class Message {
 
     // read message arguments (OSC Atomic Data Types)
     for (let i = 1; i < types.value.length; i += 1) {
-      type = types.value[i]
+      type = types.value[i].toLocaleLowerCase()
 
       if (type === 'i') {
         next = new AtomicInt32()
